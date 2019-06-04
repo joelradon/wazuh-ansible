@@ -16,4 +16,4 @@ logstash_ssl_dir: /etc/logstash
 logstash_ssl_certificate_file: "logstash.crt"
 logstash_ssl_key_file: "logstash.key"
 
-logstash_install_java: false
+logstash_install_java: true
