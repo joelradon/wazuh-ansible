@@ -1,0 +1,20 @@
+# Wazuh - Logstash configuration file
+## Remote Wazuh Manager - Filebeat input
+input {
+    beats {
+        port => 5000
+        codec => "json_lines"
+{% if logstash_ssl == true %}
+        ssl => true
+        ssl_certificate => "{{ logstash_ssl_dir }}/{{ logstash_ssl_certificate_file | basename }}"
+        ssl_key => "{{ logstash_ssl_dir }}/{{ logstash_ssl_key_file | basename }}"
+{% endif %}
+    }
+}
+
+output {
+    elasticsearch {
+        hosts => ["localhost:9200"]
+        index => "wazuh-alerts-3.x-%{+YYYY.MM.dd}"
+    }
+}
