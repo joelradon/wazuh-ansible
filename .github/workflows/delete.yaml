@@ -1,6 +1,4 @@
-on:
-  schedule:
-    - cron: "0 0 * * *" # Everday at midnight
+on: [push]
 
 jobs:
   remove-stale-branches:
