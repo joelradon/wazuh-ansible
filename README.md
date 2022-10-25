@@ -5,7 +5,7 @@
 [![Documentation](https://img.shields.io/badge/docs-view-green.svg)](https://documentation.wazuh.com)
 [![Documentation](https://img.shields.io/badge/web-view-green.svg)](https://wazuh.com)
 
-These playbooks instaall and configure Wazuh agent, manager and Elastic Stack.
+These playbooks insta]all and configure Wazuh agent, manager and Elastic Stack.
 
 ## Documentation
 
